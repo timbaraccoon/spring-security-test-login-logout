@@ -59,27 +59,30 @@
 					        </div>
 					    </div>
 
-						<!-- User name -->
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
 							
 							<input type="text" name="username" placeholder="username" class="form-control">
 						</div>
 
-						<!-- Password -->
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> 
 							
 							<input type="password" name="password" placeholder="password" class="form-control" >
 						</div>
 
-						<!-- Login/Submit Button -->
 						<div style="margin-top: 10px" class="form-group">						
 							<div class="col-sm-6 controls">
 								<button type="submit" class="btn btn-success">Login</button>
 							</div>
 						</div>
 
+						<!-- if we don't use form:form, we must set CSRF manually
+						uuot tak uot
+						<input type="hidden"
+								name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+						-->
 					</form:form>
 
 				</div>
