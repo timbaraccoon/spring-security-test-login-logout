@@ -13,9 +13,19 @@
     <p>
         Welcome to the company home page!
     </p>
+    <security:authorize access="hasRole('MANAGER')">
+        <p>
+            <a href="${pageContext.request.contextPath}/leaders/">Managers conference - details</a>
+        </p>
+    </security:authorize>
+
+    <security:authorize access="hasRole('ADMIN')">
+        <p>
+            <a href="${pageContext.request.contextPath}/systems">Admin secret section</a>
+        </p>
+    </security:authorize>
 
     <hr>
-
     <p>
         User: <security:authentication property="principal.username" />
         <br><br>
